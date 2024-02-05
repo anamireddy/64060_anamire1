@@ -1,0 +1,26 @@
+---
+title: "FML Assignment-1"
+Author: "AnuragReddy Namireddy"
+date: "2024-02-05"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r}
+
+setwd("C:/Users/anred/Desktop")
+kaggle_dataset <- read.csv("fmlA.csv")
+summary(kaggle_dataset[c("km_driven", "year", "selling_price")])
+kaggle_dataset$year_Squared <- kaggle_dataset$year^2
+hist(kaggle_dataset$year, main = "year Histogram", xlab = "year")
+plot(kaggle_dataset$year, kaggle_dataset$selling_price,
+main = "year vs selling price",
+xlab = "year", ylab = "selling price", 
+col = kaggle_dataset$km_driven)
+
+ 
+```
+
